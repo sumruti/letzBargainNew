@@ -1,0 +1,405 @@
+<app-header></app-header>
+
+
+<div class="crousel_section">
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+		</ol>
+		<div class="carousel-inner">
+			<div class="carousel-item active back_bg">
+			</div>
+			<div class="carousel-item back_bg2">
+			</div>
+			<div class="carousel-item back_bg3">
+			</div>
+		</div>
+		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			<!--  <span class="carousel-control-prev-icon" aria-hidden="true"></span>  -->
+			<span class="sr-only">Previous</span>
+			<span class="setdesktop">
+				<img src="assets/images/left-arrow.png" />
+			</span>
+			<span class="setmobile">
+				<img src="assets/images/left-arrow1.png" />
+			</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			<!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>  -->
+			<span class="sr-only">Next</span>
+			<span class="setdesktop">
+				<img src="assets/images/right-arrow.png" />
+			</span>
+			<span class="setmobile">
+				<img src="assets/images/right-arrow1.png" />
+			</span>
+		</a>
+	</div>
+</div>
+
+
+<div class="shopcategory-section">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+				<ngx-slick-carousel class="carousel slider-nav"  #slickModal="slick-carousel" 
+				[config]="slideConfig" >
+				<div ngxSlickItem *ngFor="let slide of slides" class="slide">
+					<div>
+						<h5>
+							<img src="{{ slide.img }}">
+							<div>{{slide.name}}</div>
+						</h5>
+					</div>
+				</div>
+				</ngx-slick-carousel>
+
+				<!-- <div class="slider-nav">
+					<div>
+						<h5>
+							<img src="assets/images/1.png">
+							<div>FASHION</div>
+						</h5>
+					</div>
+					<div>
+						<h5>
+							<img src="assets/images/2.png">
+							<div>BEAUTY</div>
+						</h5>
+					</div>
+					<div>
+						<h5>
+							<img src="assets/images/3.png">
+							<div>GROCERY</div>
+						</h5>
+					</div>
+					<div>
+						<h5>
+							<img src="assets/images/4.png">
+							<div>MEDICINE</div>
+						</h5>
+					</div>
+					<div>
+						<h5>
+							<img src="assets/images/5.png">
+							<div>ELECTRONICS</div>
+						</h5>
+					</div>
+					<div>
+						<h5>
+							<img src="assets/images/2.png">
+							<div>BEAUTY</div>
+						</h5>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+	<div class="best-offer-section">
+		<div class="container">
+			<div class="row">
+				<div class="offer-top col-md-6 col-sm-6 col-xs-6">
+					<h3>Best Offers Near By</h3>
+				</div>
+				<div class="offer-top-rt col-md-6 col-sm-6 col-xs-6">
+					<button type="button" class="btn btn-primary">View All</button>
+				</div>
+			</div>
+			<div class="offer-slider">
+				<ngx-slick-carousel class="carousel slider-nav"  #slickModal="slick-carousel" 
+				[config]="OffersConfig" >
+
+				<div ngxSlickItem *ngFor="let slide of Offers" class="slide">
+					<h3>
+						<img src="{{ slide.img }}">
+						<div><button type="button" class="btn btn-primary set-color">Check Out</button></div>
+					</h3>
+				</div>
+
+			</ngx-slick-carousel>
+				<!-- <div class="slider-nav">
+					<div>
+						<h3>
+							<img src="assets/images/offer-mobile.jpg">
+							<div><button type="button" class="btn btn-primary set-color">Check Out</button></div>
+						</h3>
+					</div>
+					<div>
+						<h3>
+							<img src="assets/images/offer-mobile.jpg">
+							<div><button type="button" class="btn btn-primary set-color">Check Out</button></div>
+						</h3>
+					</div>
+					<div>
+						<h3>
+							<img src="assets/images/offer-mobile.jpg">
+							<div><button type="button" class="btn btn-primary set-color">Check Out</button></div>
+						</h3>
+					</div>
+					<div>
+						<h3>
+							<img src="assets/images/offer-mobile.jpg">
+							<div><button type="button" class="btn btn-primary set-color">Check Out</button></div>
+						</h3>
+					</div>
+					<div>
+						<h3>
+							<img src="assets/images/offer-mobile.jpg">
+							<div><button type="button" class="btn btn-primary set-color">Check Out</button></div>
+						</h3>
+					</div>
+					<div>
+						<h3>
+							<img src="assets/images/offer-mobile.jpg">
+							<div><button type="button" class="btn btn-primary set-color">Check Out</button></div>
+						</h3>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+	<div class="best-offer-section">
+		<div class="container">
+			<div class="row">
+				<div class="offer-top-rt col-md-12 col-sm-12 col-xs-12">
+					<button type="button" class="btn btn-primary">View All</button>
+				</div>
+			</div>
+			<div class="offer-slider">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="ri_img_"><img src="assets/images/selling-pro.png"></div>
+					</div>
+					<div class="col-sm-9">
+						<ngx-slick-carousel class="carousel slider-nav"  #slickModal="slick-carousel" 
+			     	     [config]="topSellingConfig" >
+
+				            <div ngxSlickItem *ngFor="let slide of topSelling" class="slide">
+								<h3>
+									<img src="{{ slide.img }}">
+									<div><button type="button" class="btn btn-primary set-color">Check Out</button>
+									</div>
+								</h3>
+								  
+							</div>
+							</ngx-slick-carousel>
+
+						<!-- <div class="slider-nav">
+							<div>
+								<h3>
+									<img src="assets/images/selling.png">
+									<div><button type="button" class="btn btn-primary set-color">Check Out</button>
+									</div>
+								</h3>
+							</div>
+							<div>
+								<h3>
+									<img src="assets/images/selling.png">
+									<div><button type="button" class="btn btn-primary set-color">Check Out</button>
+									</div>
+								</h3>
+							</div>
+							<div>
+								<h3>
+									<img src="assets/images/selling.png">
+									<div><button type="button" class="btn btn-primary set-color">Check Out</button>
+									</div>
+								</h3>
+							</div>
+							<div>
+								<h3>
+									<img src="assets/images/selling.png">
+									<div><button type="button" class="btn btn-primary set-color">Check Out</button>
+									</div>
+								</h3>
+							</div>
+							<div>
+								<h3>
+									<img src="assets/images/selling.png">
+									<div><button type="button" class="btn btn-primary set-color">Check Out</button>
+									</div>
+								</h3>
+							</div>
+							<div>
+								<h3>
+									<img src="assets/images/selling.png">
+									<div><button type="button" class="btn btn-primary set-color">Check Out</button>
+									</div>
+								</h3>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="best-offer-section">
+		<div class="container">
+			<div class="row">
+				<div class="offer-top col-md-6 col-sm-6 col-xs-6">
+					<h3>Top Vendors</h3>
+				</div>
+				<div class="offer-top-rt col-md-6 col-sm-6 col-xs-6">
+					<button type="button" class="btn btn-primary">View All</button>
+				</div>
+			</div>
+			<div class="offer-slider">
+				<ngx-slick-carousel class="carousel slider-nav"  #slickModal="slick-carousel" 
+				[config]="slideConfig" >
+				<div ngxSlickItem *ngFor="let slide of Offers" class="slide">
+					<div>
+						<h3>
+							<img src="{{ slide.img }}">
+							<div><button type="button" class="btn btn-primary set-color">Check Out</button></div>
+						</h3>
+					</div>
+				</div>
+				</ngx-slick-carousel>
+				<!-- <div class="slider-nav">
+					<div>
+						<h3>
+							<img src="assets/images/offer-mobile.jpg">
+							<div><button type="button" class="btn btn-primary set-color">Check Out</button></div>
+						</h3>
+					</div>
+					<div>
+						<h3>
+							<img src="assets/images/offer-mobile.jpg">
+							<div><button type="button" class="btn btn-primary set-color">Check Out</button></div>
+						</h3>
+					</div>
+					<div>
+						<h3>
+							<img src="assets/images/offer-mobile.jpg">
+							<div><button type="button" class="btn btn-primary set-color">Check Out</button></div>
+						</h3>
+					</div>
+					<div>
+						<h3>
+							<img src="assets/images/offer-mobile.jpg">
+							<div><button type="button" class="btn btn-primary set-color">Check Out</button></div>
+						</h3>
+					</div>
+					<div>
+						<h3>
+							<img src="assets/images/offer-mobile.jpg">
+							<div><button type="button" class="btn btn-primary set-color">Check Out</button></div>
+						</h3>
+					</div>
+					<div>
+						<h3>
+							<img src="assets/images/offer-mobile.jpg">
+							<div><button type="button" class="btn btn-primary set-color">Check Out</button></div>
+						</h3>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+	<div class="best-offer-section">
+		<div class="container">
+			<div class="row">
+				<div class="offer-top-rt col-md-12 col-sm-12 col-xs-12">
+					<button type="button" class="btn btn-primary">View All</button>
+				</div>
+			</div>
+			<div class="offer-slider">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="ri_img_"><img src="assets/images/selling-pro.png"></div>
+					</div>
+					<div class="col-sm-9">
+						
+						<ngx-slick-carousel class="carousel slider-nav"  #slickModal="slick-carousel" 
+			     	     [config]="topSellingConfig" >
+
+				            <div ngxSlickItem *ngFor="let slide of topSelling" class="slide">
+								<h3>
+									<img src="{{ slide.img }}">
+									<div><button type="button" class="btn btn-primary set-color">Check Out</button>
+									</div>
+								</h3>
+								  
+							</div>
+							</ngx-slick-carousel>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!----------- Bargained products section  ends here----------->
+		<!----------- testimonial section starts here----------->
+		<div class="testimonial-section">
+			<div class="container">
+				<h3><span>Testimonials</span></h3>
+				<div id="demo" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="carousel-caption">
+								<img src="https://i.imgur.com/lE89Aey.jpg">
+								<div id="image-caption">Lorem ipsum</div>
+								<h6>Happy Customer</h6>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+									gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum
+									dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+									labore et dolore.Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+									maecenas accumsan lacus vel facilisis.
+								</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="carousel-caption">
+								<img src="https://i.imgur.com/QptVdsp.jpg" class="img-fluid">
+								<div id="image-caption">Lorem ipsum</div>
+								<h6>Happy Customer</h6>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+									gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum
+									dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+									labore et dolore.Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+									maecenas accumsan lacus vel facilisis.
+								</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="carousel-caption">
+								<img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid">
+								<div id="image-caption">Lorem ipsum</div>
+								<h6>Happy Customer</h6>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+									gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum
+									dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+									labore et dolore.Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+									maecenas accumsan lacus vel facilisis.
+								</p>
+							</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#demo" data-slide="prev">
+						<span>
+							<img src="assets/images/testimonial-left.png" />
+						</span>
+					</a> <a class="carousel-control-next" href="#demo" data-slide="next">
+						<img src="assets/images/testimonial-rt.png" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="bargain-section">
+		<div class="bargain-inner">
+			<h3>WE BARGAIN,<br> YOU GAIN</h3>
+		</div>
+	</div>
+
+		
+<!----------- bargain section ends here----------->	
+
+
+<!----------- footer section starts here----------->
+
+	<app-footer></app-footer>
+</div>
