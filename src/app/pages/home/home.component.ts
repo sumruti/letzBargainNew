@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { SlickCarouselComponent } from 'ngx-slick-carousel';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  
+
+  //@ViewChild('slickModal', { static: true }) slickModal: SlickCarouselComponent;
+
   slides = [
     {img: "assets/images/1.png",name:"FASHION"},
     {img: "assets/images/2.png",name:"BEAUTY"},
@@ -15,7 +18,7 @@ export class HomeComponent implements OnInit {
     {img: "assets/images/5.png",name:"ELECTRONICS"},
     {img: "assets/images/2.png",name:"BEAUTY"},
   ];
-  slideConfig = {"slidesToShow": 5, "slidesToScroll": 1};
+  slideConfig = {"slidesToShow": 5, "slidesToScroll": 1, 'arrows': false,};
 
 
   Offers  = [
@@ -42,6 +45,14 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  next() {
+    //this.slickModal.slickNext();
+  }
+  
+  prev() {
+    //this.slickModal.slickPrev();
   }
 
 }
